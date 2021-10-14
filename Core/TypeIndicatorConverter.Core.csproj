@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks Condition="'$(LibraryFrameworks)'==''">net5.0;net45;net46;net47;net48;netcoreapp3.1;netcoreapp3.0;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks Condition="'$(LibraryFrameworks)'!=''">$(LibraryFrameworks)</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <PackageId>TypeIndicatorConverter.Core</PackageId>
+    <Company></Company>
+    <Product>TypeIndicatorConverter.Core</Product>
+    <Authors>Aleksashin A.S.</Authors>
+    <AssemblyName>TypeIndicatorConverter.Core</AssemblyName>
+    <RootNamespace>TypeIndicatorConverter.Core</RootNamespace>
+    <PackageLicenseFile></PackageLicenseFile>
+    <Copyright>Copyright © Aleksandr Aleksashin 2021</Copyright>
+    <Description>Core library for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Description>
+	<Summary>Core library for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Summary>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl> 
+	<IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <CodeAnalysisRuleset>..\.ruleset</CodeAnalysisRuleset>
+	<NeutralLanguage>en-US</NeutralLanguage>
+	<RepositoryUrl>https://github.com/aleksandr-aleksashin/TypeIndicatorConverter</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/aleksandr-aleksashin/TypeIndicatorConverter</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
