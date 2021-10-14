@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>TypeIndicatorConverter.Benchmark</AssemblyName>
+
+    <RootNamespace>TypeIndicatorConverter.Benchmark</RootNamespace>
+
+    <Authors>Aleksashin A.S.</Authors>
+
+    <Company></Company>
+
+    <Product>TypeIndicatorConverter.Benchmark</Product>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+    <PackageReference Include="JsonKnownTypes" Version="0.5.4" />
+    <PackageReference Include="JsonSubTypes" Version="1.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\TypeIndicatorConverter.Core.csproj" />
+    <ProjectReference Include="..\Json.Net\TypeIndicatorConverter.NewtonsoftJson.csproj" />
+  </ItemGroup>
+
+</Project>
