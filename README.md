@@ -1,5 +1,5 @@
 # TypeIndicator converter
- - [![lisence](https://img.shields.io/badge/lisence-MIT-green?style=flat-square)](https://github.com/aleksandr-aleksashin/TypeIndicatorConverter/blob/master/LICENSE)
+ - [![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/aleksandr-aleksashin/TypeIndicatorConverter/blob/master/LICENSE)
 - Core library:
 [![nuget core](https://img.shields.io/nuget/v/TypeIndicatorConverter.Core)](https://www.nuget.org/packages/TypeIndicatorConverter.Core)
 [![downloads core](https://img.shields.io/nuget/dt/TypeIndicatorConverter.Core)](https://www.nuget.org/packages/TypeIndicatorConverter.Core)
