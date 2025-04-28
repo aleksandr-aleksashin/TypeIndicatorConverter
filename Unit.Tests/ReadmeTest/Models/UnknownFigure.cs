@@ -1,13 +1,12 @@
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace DashaAI.TypeIndicatorConverter.Unit.Tests.ReadmeTest.Models
+namespace DashaAI.TypeIndicatorConverter.Unit.Tests.ReadmeTest.Models;
+
+[FallbackIndicator]
+public class UnknownFigure : FigureBase
 {
-    [FallbackIndicator]
-    public class UnknownFigure : FigureBase
+    public override string Draw()
     {
-        public override string Draw()
-        {
-            return $"UnknownFigure";
-        }
+        return $"UnknownFigure";
     }
 }

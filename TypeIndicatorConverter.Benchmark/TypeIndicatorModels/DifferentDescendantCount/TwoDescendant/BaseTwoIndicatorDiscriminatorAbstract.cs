@@ -1,10 +1,9 @@
 using TypeIndicatorConverter.NewtonsoftJson;
 using Newtonsoft.Json;
 
-namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels.DifferentDescendantCount.TwoDescendant
+namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels.DifferentDescendantCount.TwoDescendant;
+
+[JsonConverter(typeof(TypeIndicatorConverter<BaseTwoIndicatorTypeIndicatorAbstract>))]
+public abstract class BaseTwoIndicatorTypeIndicatorAbstract
 {
-    [JsonConverter(typeof(TypeIndicatorConverter<BaseTwoIndicatorTypeIndicatorAbstract>))]
-    public abstract class BaseTwoIndicatorTypeIndicatorAbstract
-    {
-    }
 }

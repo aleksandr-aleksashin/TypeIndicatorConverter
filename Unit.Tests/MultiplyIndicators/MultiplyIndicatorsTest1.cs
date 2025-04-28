@@ -1,10 +1,9 @@
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace DashaAI.TypeIndicatorConverter.Unit.Tests.MultiplyIndicators
+namespace DashaAI.TypeIndicatorConverter.Unit.Tests.MultiplyIndicators;
+
+public class MultiplyIndicatorsTest1 : MultiplyIndicatorsBaseTest
 {
-    public class MultiplyIndicatorsTest1 : MultiplyIndicatorsBaseTest
-    {
-        [TypeIndicator]
-        public string Type1 => "Type1";
-    }
+    [TypeIndicator]
+    public string Type1 => "Type1";
 }

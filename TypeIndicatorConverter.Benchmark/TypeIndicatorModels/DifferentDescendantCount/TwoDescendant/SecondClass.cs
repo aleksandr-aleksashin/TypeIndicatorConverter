@@ -1,10 +1,9 @@
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels.DifferentDescendantCount.TwoDescendant
+namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels.DifferentDescendantCount.TwoDescendant;
+
+public class SecondClass : BaseTwoIndicatorTypeIndicatorAbstract
 {
-    public class SecondClass : BaseTwoIndicatorTypeIndicatorAbstract
-    {
-        [TypeIndicator]
-        public string Type { get; } = nameof(SecondClass);
-    }
+    [TypeIndicator]
+    public string Type { get; } = nameof(SecondClass);
 }

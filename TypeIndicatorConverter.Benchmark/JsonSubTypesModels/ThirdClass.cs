@@ -1,7 +1,6 @@
-namespace TypeIndicatorConverter.Benchmark.JsonSubTypesModels
+namespace TypeIndicatorConverter.Benchmark.JsonSubTypesModels;
+
+public class ThirdClass : BaseSubTypesAbstract
 {
-    public class ThirdClass : BaseSubTypesAbstract
-    {
-        public override string Type { get; } = nameof(ThirdClass);
-    }
+    public override string Type { get; } = nameof(ThirdClass);
 }
