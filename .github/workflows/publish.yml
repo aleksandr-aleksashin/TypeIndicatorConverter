@@ -41,17 +41,31 @@ jobs:
           8.x.x
   
     - name: Install dependencies 
-      run: dotnet restore $CORE_PACKAGE && dotnet restore $SYS_JSON_PACKAGE && dotnet restore $JSON_NET_PACKAGE
+      run: | 
+        dotnet restore $CORE_PACKAGE 
+        dotnet restore $SYS_JSON_PACKAGE 
+        dotnet restore $JSON_NET_PACKAGE
 
     - name: Build
-      run: dotnet build $CORE_PACKAGE --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION && dotnet build $SYS_JSON_PACKAGE --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION && dotnet build $JSON_NET_PACKAGE --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION
+      run: |
+        dotnet build $CORE_PACKAGE --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION 
+        dotnet build $SYS_JSON_PACKAGE --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION 
+        dotnet build $JSON_NET_PACKAGE --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION
 
     - name: Run tests
       run: | 
         cd Unit.Tests
         dotnet test --configuration $BUILD_CONFIG --verbosity normal
 
+    - name: Pack nuget
+      if: startsWith(github.ref, 'refs/tags/release')
+      run: 
+        dotnet pack TypeIndicatorConverter.sln --configuration Release -o nuget --include-symbols
+
     - name: Publish
       if: startsWith(github.ref, 'refs/tags/release')
-      run: dotnet nuget push Core/bin/Release/TypeIndicatorConverter.Core.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json && dotnet nuget push Text.Json/bin/Release/TypeIndicatorConverter.TextJson.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json && dotnet nuget push Json.Net/bin/Release/TypeIndicatorConverter.NewtonsoftJson.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json
+      run: |
+        dotnet nuget push nuget/TypeIndicatorConverter.Core.1.1.0.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json 
+        dotnet nuget push nuget/TypeIndicatorConverter.TextJson.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json 
+        dotnet nuget push nuget/TypeIndicatorConverter.NewtonsoftJson.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json
     
