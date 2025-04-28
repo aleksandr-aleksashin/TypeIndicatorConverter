@@ -65,7 +65,7 @@ jobs:
     - name: Publish
       if: startsWith(github.ref, 'refs/tags/release')
       run: |
-        dotnet nuget push nuget/TypeIndicatorConverter.Core.1.1.0.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json 
+        dotnet nuget push nuget/TypeIndicatorConverter.Core.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json 
         dotnet nuget push nuget/TypeIndicatorConverter.TextJson.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json 
         dotnet nuget push nuget/TypeIndicatorConverter.NewtonsoftJson.$BUILD_VERSION.nupkg -k ${{secrets.NUGET}} -s https://api.nuget.org/v3/index.json
     
