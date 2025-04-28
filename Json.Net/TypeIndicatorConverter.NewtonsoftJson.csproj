@@ -1,30 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks Condition="'$(LibraryFrameworks)'==''">net5.0;net45;net46;net47;net48;netcoreapp3.1;netcoreapp3.0;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks Condition="'$(LibraryFrameworks)'==''">net8.0;net9.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <TargetFrameworks Condition="'$(LibraryFrameworks)'!=''">$(LibraryFrameworks)</TargetFrameworks>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>13.0</LangVersion>
+		<Version>1.1.0</Version>
+		<Nullable>enable</Nullable>
     <AssemblyName>TypeIndicatorConverter.NewtonsoftJson</AssemblyName>
     <RootNamespace>TypeIndicatorConverter.NewtonsoftJson</RootNamespace>
     <Authors>Aleksashin A.S.</Authors>
     <Company></Company>
     <Product>TypeIndicatorConverter.NewtonsoftJson</Product>
     <PackageLicenseFile></PackageLicenseFile>
-    <Copyright>Copyright © Aleksandr Aleksashin 2021</Copyright>
+    <Copyright>Copyright © Aleksandr Aleksashin 2025</Copyright>
     <Description>Json converter for Newtonsoft.Json package for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Description>
-	<Summary>Json converter for Newtonsoft.Json package for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Summary>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <Summary>Json converter for Newtonsoft.Json package for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Summary>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl> 
-	<IncludeSymbols>true</IncludeSymbols>
+	  <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <CodeAnalysisRuleset>..\.ruleset</CodeAnalysisRuleset>
-	<NeutralLanguage>en-US</NeutralLanguage>
-	<PackageProjectUrl>https://github.com/aleksandr-aleksashin/TypeIndicatorConverter</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/aleksandr-aleksashin/TypeIndicatorConverter</RepositoryUrl>
+	  <NeutralLanguage>en-US</NeutralLanguage>
+	  <PackageProjectUrl>https://github.com/aleksandr-aleksashin/TypeIndicatorConverter</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/aleksandr-aleksashin/TypeIndicatorConverter</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>

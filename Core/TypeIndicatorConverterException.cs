@@ -1,11 +1,10 @@
 using System;
 
-namespace TypeIndicatorConverter.Core
+namespace TypeIndicatorConverter.Core;
+
+public class TypeIndicatorConverterException : Exception
 {
-    public class TypeIndicatorConverterException : Exception
+    public TypeIndicatorConverterException(string message) : base(message)
     {
-        public TypeIndicatorConverterException(string message) : base(message)
-        {
-        }
     }
 }

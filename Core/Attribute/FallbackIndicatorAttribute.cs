@@ -1,9 +1,8 @@
 using System;
 
-namespace TypeIndicatorConverter.Core.Attribute
+namespace TypeIndicatorConverter.Core.Attribute;
+
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+public class FallbackIndicatorAttribute : System.Attribute
 {
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    public class FallbackIndicatorAttribute : System.Attribute
-    {
-    }
 }

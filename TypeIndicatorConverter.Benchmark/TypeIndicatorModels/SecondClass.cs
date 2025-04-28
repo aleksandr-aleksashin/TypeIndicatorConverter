@@ -1,10 +1,9 @@
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels
+namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels;
+
+public class SecondClass : BaseTypeIndicatorAbstract
 {
-    public class SecondClass : BaseTypeIndicatorAbstract
-    {
-        [TypeIndicator]
-        public override string Type { get; } = nameof(SecondClass);
-    }
+    [TypeIndicator]
+    public override string Type { get; } = nameof(SecondClass);
 }

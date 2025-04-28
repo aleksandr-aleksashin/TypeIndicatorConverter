@@ -1,10 +1,9 @@
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace DashaAI.TypeIndicatorConverter.Unit.Tests.FallBackIndicator
+namespace DashaAI.TypeIndicatorConverter.Unit.Tests.FallBackIndicator;
+
+[FallbackIndicator]
+public class FallBackIndicatorTest1 : FallBackIndicatorBaseTest
 {
-    [FallbackIndicator]
-    public class FallBackIndicatorTest1 : FallBackIndicatorBaseTest
-    {
-        public string Type => "Type";
-    }
+    public string Type => "Type";
 }

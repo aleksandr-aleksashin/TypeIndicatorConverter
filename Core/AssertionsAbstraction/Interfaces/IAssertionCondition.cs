@@ -1,7 +1,6 @@
-namespace TypeIndicatorConverter.Core.AssertionsAbstraction.Interfaces
+namespace TypeIndicatorConverter.Core.AssertionsAbstraction.Interfaces;
+
+internal interface IAssertionCondition<in TElement, in TSettings>
 {
-    internal interface IAssertionCondition<in TElement, in TSettings>
-    {
-        bool Assert(TElement actualValue, TSettings actualSettings);
-    }
+    bool Assert(TElement actualValue, TSettings actualSettings);
 }

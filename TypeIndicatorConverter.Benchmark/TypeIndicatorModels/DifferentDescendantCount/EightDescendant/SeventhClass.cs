@@ -1,10 +1,9 @@
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels.DifferentDescendantCount.EightDescendant
+namespace TypeIndicatorConverter.Benchmark.TypeIndicatorConverterModels.DifferentDescendantCount.EightDescendant;
+
+public class SeventhClass : BaseEightIndicatorTypeIndicatorAbstract
 {
-    public class SeventhClass : BaseEightIndicatorTypeIndicatorAbstract
-    {
-        [TypeIndicator]
-        public string Type { get; } = nameof(SeventhClass);
-    }
+    [TypeIndicator]
+    public string Type { get; } = nameof(SeventhClass);
 }

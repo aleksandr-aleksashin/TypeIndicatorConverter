@@ -1,12 +1,11 @@
 using System.Diagnostics.CodeAnalysis;
 using TypeIndicatorConverter.Core.Attribute;
 
-namespace DashaAI.TypeIndicatorConverter.Unit.Tests.TestMultiplyDeallowed
+namespace DashaAI.TypeIndicatorConverter.Unit.Tests.TestMultiplyDeallowed;
+
+[ExcludeFromCodeCoverage]
+public class MultiplyDeAllowedTest2 : MultiplyDeAllowedBaseTest
 {
-    [ExcludeFromCodeCoverage]
-    public class MultiplyDeAllowedTest2 : MultiplyDeAllowedBaseTest
-    {
-        [TypeIndicator]
-        public string Test => "Test";
-    }
+    [TypeIndicator]
+    public string Test => "Test";
 }

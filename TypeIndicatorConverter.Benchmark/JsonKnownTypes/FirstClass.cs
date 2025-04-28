@@ -1,7 +1,6 @@
-namespace TypeIndicatorConverter.Benchmark.JsonKnownTypes
+namespace TypeIndicatorConverter.Benchmark.JsonKnownTypes;
+
+public class FirstClass : BaseKnownTypesAbstract
 {
-    public class FirstClass : BaseKnownTypesAbstract
-    {
-        public override string Type { get; } = nameof(TypeIndicatorConverterModels.FirstClass);
-    }
+    public override string Type { get; } = nameof(TypeIndicatorConverterModels.FirstClass);
 }
