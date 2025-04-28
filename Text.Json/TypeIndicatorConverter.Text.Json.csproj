@@ -12,7 +12,7 @@
     <Authors>Aleksashin A.S.</Authors>
     <Product>TypeIndicatorConverter.TextJson</Product>
     <PackageId>TypeIndicatorConverter.TextJson</PackageId>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageLicenseFile></PackageLicenseFile>
     <Copyright>Copyright © Aleksandr Aleksashin 2025</Copyright>
     <Description>Json converter for System.Text.Json package for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Description>
 	  <Summary>Json converter for System.Text.Json package for serializing and deserializing polymorphic types. Choosing type by indicators field describing in C# classes.</Summary>
@@ -32,10 +32,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core\TypeIndicatorConverter.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-     <None Include="..\LICENSE" Pack="true" PackagePath="LICENSE" />
   </ItemGroup>
 
 </Project>
